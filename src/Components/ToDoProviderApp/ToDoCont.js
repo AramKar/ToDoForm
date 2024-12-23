@@ -8,15 +8,16 @@ import { faPenToSquare } from '@fortawesome/free-solid-svg-icons';
 function ToDoCont() {
   const { toDos, setToDos } = useContext(ToDoContext); 
 
-  function EditToDoValue() {
-     const EditValue = prompt("Edit your text")
-     setToDos(EditValue)
+  function EditToDoValue(item) {
+     const editValue = prompt("Edit your text", item.toDo);
+    const editedToDo = toDos.map((toDo) =>
+    toDo.id == item.id ? {...toDo, toDo: editValue} : toDo)
+    setToDos(editedToDo)
   }
 
   function InputValueRemove(item) {
-    const filteredToDo = toDos.filter((toDo) => toDo.id !== item.id)
-    setToDos(filteredToDo)
-    console.log(item)
+    const filteredToDo = toDos.filter((toDo) => toDo.id !== item.id);
+    setToDos(filteredToDo);
   }
 
   return (
@@ -24,7 +25,7 @@ function ToDoCont() {
             {toDos.map((item) => {
                 return(
                 <div className="toDo-items">
-                    <div className="to-do-item"> <input  type="checkbox" id="checkbox"/>{item.toDo}<FontAwesomeIcon style = {{marginLeft: "10px"}} color = {"purple"} icon = {faPenToSquare} onClick={EditToDoValue}></FontAwesomeIcon><button onClick = {() =>InputValueRemove(item)} className="remove">Remove</button></div>
+                    <div className="to-do-item"> <input  type="checkbox" id="checkbox"/>{item.toDo}<FontAwesomeIcon style = {{marginLeft: "10px"}} color = {"purple"} icon = {faPenToSquare} onClick = {() =>EditToDoValue(item)}></FontAwesomeIcon><button onClick = {() =>InputValueRemove(item)} className="remove">Remove</button></div>
                 </div>
 
                 )
