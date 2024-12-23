@@ -1,0 +1,43 @@
+.todo-form {
+    width: 450px;
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    border: 2px solid gray;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
+
+.todo-title {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

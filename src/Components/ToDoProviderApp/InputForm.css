@@ -1,0 +1,33 @@
+#add-button {
+    width: 50px;
+    border-radius: 10px;
+    border: 1px solid gray;
+
+}
+
+#add-button {
+    width: 340px;
+    border: 1px solid gray;
+    background-color: darkgrey;
+    color: white;
+    font-weight: bold;
+}
+
+.input-button {
+    width: 270px;
+    display: flex;
+    height:25px;
+    gap: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

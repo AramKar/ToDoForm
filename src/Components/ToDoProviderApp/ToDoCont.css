@@ -1,0 +1,42 @@
+.toDo-items {
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    width: 270px;
+
+}
+
+.toDo-items div {
+    height: 38px;
+    border: 1px solid darkgray;
+    border-radius: 7px;
+    display: flex;
+    margin-top: 2px;
+}
+
+
+
+.remove {
+    margin-left: 50px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: darkgrey;
+    color: white;
+    border: 0px;
+}
+
+.to-do-item {
+    display: flex;
+    align-items: center;
+    
+}
+
+
+
+
+
+
+
+
+
+
